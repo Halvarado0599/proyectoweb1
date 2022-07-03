@@ -44,50 +44,62 @@ img{
     max-width: 100%;
 }
 .contenedor{
-    max-width: 120rem;
+    width: min(90%, 120rem);
     margin: 0 auto;
 }
 .header{
-    background-color: var(--azul-claro);
-    display:grid;
-    grid-template-columns: 30% 70%;
-    padding-bottom: 1rem 0;
-}
-.header__logo{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    grid-row: 1 / 3;
+    background: var(--azul-claro);
 }
 .header__logo a{
     color: var(--primario);
     font-family: var(--fuente-roboto);
 }
 .header__redes-sociales{
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    gap: 1rem;
-    margin-right: 2rem;
+    display: none;
 }
 .header__nav-bar{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
+    position: relative;
 }
 .header__nav-bar a{
     color: var(--blanco);
-    font-weight: 700;
-    padding: 1rem;
-}
-.seleccion{
-    text-decoration: overline;
-    color: #212121;
+    font-weight: bold;
+    padding: 0.5rem;
 }
 .header__nav-bar a:hover{
+    background: var(--blanco);
     color: var(--oscuro);
-    background-color: var(--blanco);
-    text-decoration: overline;
+}
+@media (min-width: 992px) {
+    .header{
+        display:grid;
+        grid-template-areas: 
+        'logo redes'
+        'logo nav';
+    }
+    .header__logo{
+       grid-area: logo;
+       text-align: center;
+    }
+    .header__redes-sociales{
+        grid-area: redes;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 2rem;
+    }
+    .header__nav-bar{
+        grid-area: nav;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .seleccion{
+        text-decoration: overline;
+    }
 }
 .banner{
     height: 50rem;
@@ -99,24 +111,26 @@ img{
     margin-bottom: 2rem;
 }
 .banner__contenido{
-    position: absolute;
-    color: var(--blanco);
-    background-color: rgba(0,0,0,.5); /*Sintaxis anterior*/
-    /*background-color: rgb(0 0 0 /50%);*/ /*Nueva sintaxis aunque no esta soportada por todos los navegadores asi que por ello deja las dos sintaxis*/
-    width: 100%;
-    height: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    position: absolute;
+    color: var(--blanco);
+    background-color: rgb(0 0 0 /50%);
+    width: 100%;
+    height: 100%;
 }
 .tarjeta-promocion{
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    column-gap: 2rem;
     border-bottom: 1px solid var(--gris);
     padding: 2rem 0;
+}
+@media (min-width: 992px) {
+    .tarjeta-promocion{
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        column-gap: 2rem;
+    }
 }
 .tarjeta-promocion:last-of-type{
     border: none;
@@ -146,19 +160,24 @@ img{
     cursor: pointer;
 }
 /* Footer */
+
 .footer{
-    background-color: var(--azul-claro);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--azul-claro); 
 }
-.footer__redes-sociales{
+.footer__contenedor{
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-    margin-right: 2rem;
+}
+@media (max-width: 600px) {
+    .footer__contenedor{
+        flex-direction: column;
+    }
+    .footer__redes-sociales{
+        margin-top: 2rem;
+        order: -1;
+    }
 }
 .footer p{
-    margin-left: 2rem;
     color: var(--blanco);
 }
