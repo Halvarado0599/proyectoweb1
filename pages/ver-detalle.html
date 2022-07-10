@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css" as="style">
-    <link rel="stylesheet" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="../css/normalize.css" as="style">
+    <link rel="stylesheet" href="../css/styles.css" as="style">
     <title>Promociones - travel Agency</title>
 </head>
 
 <body>
     <header class="header">
         <div class="header__logo ">
-            <a href="index.html">
+            <a href="../index.html">
                 <h1>Travel Agency</h1>
             </a>
         </div>
@@ -72,22 +72,110 @@
             </a>
         </div>
         <nav class="header__nav-bar">
-            <a class="seleccion" href="index.html">Inicio</a>
-            <a href="pages/destinos.html">Destinos</a>
-            <a href="pages/promociones.html">Promociones</a>
-            <a href="pages/quienes-somos.html">Quienes Somos</a>
-            <a href="pages/contactanos.html">Contactanos</a>
+            <a href="../index.html">Inicio</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="promociones.html">Promociones</a>
+            <a href="quienes-somos.html">Quienes Somos</a>
+            <a href="contactanos.html">Contactanos</a>
         </nav>
     </header>
     <!--Fin contedor-cancabezado-->
-    <section class="banner">
-        <div class="banner__contenido">
-            <h2>El viaje de tu vida</h2>
-        </div>
-    </section>
     <main class="contenedor">
 
+        <div class="carrusel">
+            <ul class="carrusel__menu">
+                <li><a href="#foto1"><img src="../img/banner.jpeg" alt="foto"></a></li>
+                <li><a href="#foto2"><img src="../img/banner2.jpg" alt="foto"></a></li>
+                <li><a href="#foto3"><img src="../img/banner3.jpg" alt="foto"></a></li>
+                <li><a href="#foto4"><img src="../img/banner4.jpg" alt="foto"></a></li>
+                <li><a href="#foto5"><img src="../img/img1.jpeg" alt="foto"></a></li>
+                <li><a href="#foto6"><img src="../img/img3.jpeg" alt="foto"></a></li>
+            </ul>
+            <ul class="carrusel__fotos">
+                <li id="foto1"><img src="../img/banner.jpeg" alt="foto"></li>
+                <li id="foto2"><img src="../img/banner2.jpg" alt="foto"></li>
+                <li id="foto3"><img src="../img/banner3.jpg" alt="foto"></li>
+                <li id="foto4"><img src="../img/banner4.jpg" alt="foto"></li>
+                <li id="foto5"><img src="../img/img1.jpeg" alt="foto"></li>
+                <li id="foto6"><img src="../img/img3.jpeg" alt="foto"></li>
+            </ul>
+        </div>
 
+        <div class="informacion-destino">
+            <h2 class="informacion-destino__nombre">
+                Acapulco
+            </h2>
+            <p class="informacion-destino__pais">Mexico</p>
+            <p class="informacion-destino__descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+                rem porro illo tenetur aliquid facilis
+                libero repudiandae asperiores? Vitae tempore quaerat minus, eos quos explicabo magni. Repellat nihil
+                porro dignissimos?
+                Non nihil labore aperiam ducimus velit, ex earum aut iusto impedit voluptatum, vitae, nobis eligendi
+                fuga eius suscipit libero aspernatur quibusdam neque maiores nisi consequuntur eos quae saepe quaerat.
+                Quia.
+                Enim animi fugiat optio pariatur rerum suscipit eaque, quibusdam itaque porro laudantium dolor
+                laboriosam eius alias nam aspernatur nesciunt eveniet. Doloribus vitae placeat reprehenderit nam id
+                commodi ex quaerat eaque.
+            </p>
+        </div>
+        <p class="division-paquete">Paquetes</p>
+        <div class="paquete">
+            <div class="paquete__informacion">
+                <p>Acapulco te espera con el paquete TODO INCLUIDO en Hotel Mena Mena Nomi Bay desde
+                    <strong>💲225</strong> por Adulto
+                </p>
+                <p>Disfruta del, Sol, Playa y Arena, aprovecha esta promoción y Reserva Hoy Mismo</p>
+                <p>Paquete Incluiye</p>
+                <ul>
+                    <li>🚌 Traslados Muelle -Hotel- Muelle.</li>
+                    <li>🏨 Alojamiento en acomodación de acuerdo a disponibilidad en habitación de su preferencia.</li>
+                    <li>🍽 Alimentación tipo buffet, comida tipica e internacional.</li>
+                    <li>🥤 Bebidas Sin Alcohol Ilimitados.</li>
+                    <li>🍻 Bebidas con Alcohol Ilimitados.</li>
+                    <li>🏊‍♂ Uso de todas las instalaciones del Hotel.</li>
+                    <li>📍 Servicio de internet.</li>
+                    <li>🏷 Impuestos Hoteleros.</li>
+                </ul>
+            </div>
+            <div class="paquete__detalle">
+                <p class="paquete__detalle-mensaje">Tarifa por Persona</p>
+                <p class="no-margin no-padding">Paquete 3 dias 2 noches</p>
+                <p class="no-margin no-padding">Precio por persona segun acomodación</p>
+                <div class="paquete__detalle-precio">
+                    <table class="paquete__detalle-tabla">
+                        <tr>
+                            <td class="encabezado-tabla"><strong>Tipo habitación</strong></td>
+                            <td class="encabezado-tabla"><strong>Precio</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Habitación Sencilla</td>
+                            <td>$500</td>
+                        </tr>
+                        <tr>
+                            <td>Habitación Doble</td>
+                            <td>$400</td>
+                        </tr>
+                        <tr>
+                            <td>Habitación Triple</td>
+                            <td>$300</td>
+                        </tr>
+                        <tr>
+                            <td>Habitación Cuadruple</td>
+                            <td>$200</td>
+                        </tr>
+                        <tr>
+                            <td>Niños</td>
+                            <td>$100</td>
+                        </tr>
+                    </table>
+                    <a
+                        href="https://api.whatsapp.com/send?phone=50494838144&text=Hola%20Travel%20Agency%0Ame%20gustaría%20hacer%20una%20cotización">
+                        <input id="enviar-mensaje" class="boton-enviar" type="submit" value="📞Haz tu cotizacion">
+                    </a>
+                </div>
+
+            </div>
+        </div>
 
     </main>
     <footer class="footer">
